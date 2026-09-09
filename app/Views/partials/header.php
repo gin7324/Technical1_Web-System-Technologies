@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= esc($title ?? 'GENIE POS') ?> |GENIE POS</title>
+    <title><?= esc($title ?? 'GENIE POS') ?> | GENIE POS</title>
     <style>
         :root { --ink: #172121; --muted: #61706d; --paper: #f5f2ea; --panel: #fffdf8; --accent: #db5a3f; --line: #dedbd1; }
         * { box-sizing: border-box; }
@@ -21,6 +21,13 @@
         .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
         .button { display: inline-block; padding: 13px 18px; border: 1px solid var(--ink); color: var(--ink); font-family: Arial, sans-serif; font-size: .88rem; text-decoration: none; }
         .button.primary { border-color: var(--accent); background: var(--accent); color: white; }
+        .stat-grid, .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 42px; }
+        .stat, .info-block { padding: 22px; border: 1px solid var(--line); background: var(--panel); }
+        .stat strong { display: block; margin-bottom: 7px; font-size: 2.1rem; }
+        .stat span, .info-block p { margin: 0; color: var(--muted); font-family: Arial, sans-serif; font-size: .85rem; line-height: 1.55; }
+        .info-block h3 { margin: 0 0 10px; font-size: 1.25rem; }
+        .section-heading { margin: 56px 0 18px; }
+        .section-heading h3 { margin: 8px 0; font-size: 1.65rem; }
         .page-heading { margin-bottom: 34px; }
         .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); }
         table { width: 100%; border-collapse: collapse; min-width: 620px; }
@@ -30,6 +37,7 @@
         tbody tr:last-child td { border-bottom: 0; }
         .role { color: var(--accent); font-weight: bold; }
         footer { max-width: 1120px; margin: auto; padding: 0 24px 28px; color: var(--muted); font-family: Arial, sans-serif; font-size: .78rem; }
+        @media (max-width: 760px) { .stat-grid, .info-grid { grid-template-columns: 1fr; } }
         @media (max-width: 600px) { header { align-items: flex-start; flex-direction: column; } main { padding-top: 32px; } }
     </style>
 </head>

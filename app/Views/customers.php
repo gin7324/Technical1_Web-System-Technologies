@@ -4,6 +4,15 @@
     <h2>Customer Accounts</h2>
     <p>A quick view of the customers currently known to the shop.</p>
 </div>
+<div class="stat-grid">
+    <div class="stat"><strong><?= count($customers) ?></strong><span>Total customer records</span></div>
+    <div class="stat"><strong>100%</strong><span>Records include contact details</span></div>
+    <div class="stat"><strong>Live</strong><span>Directory available to the counter team</span></div>
+</div>
+<div class="section-heading">
+    <span class="eyebrow">Customer directory</span>
+    <h3>Contact details at a glance.</h3>
+</div>
 <div class="table-wrap">
     <table>
         <thead>

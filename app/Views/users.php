@@ -4,6 +4,15 @@
     <h2>User Accounts</h2>
     <p>Staff access details for the people who keep the counter running.</p>
 </div>
+<div class="stat-grid">
+    <div class="stat"><strong><?= count($users) ?></strong><span>Total staff accounts</span></div>
+    <div class="stat"><strong>05</strong><span>Roles represented in the team</span></div>
+    <div class="stat"><strong>Secure</strong><span>Access details kept in one place</span></div>
+</div>
+<div class="section-heading">
+    <span class="eyebrow">Team directory</span>
+    <h3>Know who is responsible for what.</h3>
+</div>
 <div class="table-wrap">
     <table>
         <thead>
