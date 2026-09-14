@@ -6,7 +6,7 @@
 </div>
 <div class="stat-grid">
     <div class="stat"><strong><?= count($users) ?></strong><span>Total staff accounts</span></div>
-    <div class="stat"><strong>05</strong><span>Roles represented in the team</span></div>
+    <div class="stat"><strong>Live</strong><span>Account records retrieved from MySQL</span></div>
     <div class="stat"><strong>Secure</strong><span>Access details kept in one place</span></div>
 </div>
 <div class="section-heading">
@@ -16,14 +16,14 @@
 <div class="table-wrap">
     <table>
         <thead>
-            <tr><th>Username</th><th>Full name</th><th>Role</th></tr>
+            <tr><th>Username</th><th>Full name</th><th>Created at</th></tr>
         </thead>
         <tbody>
             <?php foreach ($users as $user): ?>
                 <tr>
                     <td><?= esc($user['username']) ?></td>
                     <td><?= esc($user['full_name']) ?></td>
-                    <td class="role"><?= esc($user['role']) ?></td>
+                    <td><?= esc($user['created_at']) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
